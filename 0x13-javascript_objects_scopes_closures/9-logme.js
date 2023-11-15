@@ -2,5 +2,5 @@
 let nbrArg = 0;
 
 exports.logMe = function (item) {
-  console.log(`${nbrArg++} : ${item}`);
+  console.log(`${nbrArg++}: ${item}`);
 };
