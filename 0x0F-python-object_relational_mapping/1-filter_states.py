@@ -11,7 +11,7 @@ def print_states(argv):
                          passwd=argv[2], db=argv[3], port=3306)
     cursor = db.cursor()
     cursor.execute("""SELECT * FROM states
-            WHERE name LIKE 'N%' ORDER BY states.id""")
+            WHERE BINARY name LIKE 'N%' ORDER BY states.id""")
     rows = cursor.fetchall()
     for row in rows:
         print(row)
